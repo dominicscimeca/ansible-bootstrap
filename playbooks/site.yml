@@ -1,0 +1,14 @@
+---
+- hosts: local
+  become: yes
+  become_user: root
+  connection: ssh
+
+  tasks:
+    - include: tasks/base.yml
+
+  roles:
+    - samdoran.java
+    - datadog-galaxy.docker
+
+
